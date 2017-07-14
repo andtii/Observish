@@ -2,7 +2,7 @@
     "compileOnSave": true,
     "compilerOptions": {
         "target": "es5",
-        "out": "output.js",
+        "out": "src/output.js",
         "watch": true,
         "module": "amd"
     }

@@ -14,7 +14,7 @@ class Observish {
         //If property is object the recursively subscribe
         Observish.subscribeTo(obj[key], changeCallback);
       }
-      
+
       const property = Object.getOwnPropertyDescriptor(obj, key)
       if (property && property.configurable === false) {
         return
@@ -47,7 +47,12 @@ class Observish {
             property.value = newVal;
           }
 
-          changeCallback(newVal, value, obj['__observish__'] + '.' + key);
+          var propPath = key;
+          if (obj['__observish__']) {
+            propPath = obj['__observish__'] + '.' + key;
+          }
+
+          changeCallback(newVal, value, propPath);
         }
       });
     }

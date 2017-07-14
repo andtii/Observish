@@ -19,9 +19,8 @@ Observish.subscribeTo(model, (newVal, oldVal, path) => {
 
 model.Level1.Level2.Level3String = "Updating value";
 model.Level1.Level2.Level3String = "Updating value again";
-model.Level1.Level2.Level3Number = 11
-model.s = "setting on root prop"
-
+model.Level1.Level2.Level3Number = 11;
+model.s = "setting on root prop";
 
 
 
